@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{color}
+%\include{macros}
+%\usepackage{floatflt}
+%\usepackage{graphics}
+%\usepackage{epsfig}
+\usepackage[colorlinks,linkcolor=red,anchorcolor=blue,citecolor=green]{hyperref}
+\usepackage{epstopdf}
+
+\usepackage[UTF8]{ctex}
+\usepackage{verbatim}
+\usepackage[backend=bibtex,style=authoryear,natbib=true,backref=true]{biblatex}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{note}{Note}
+\newtheorem*{exercise}{Exercise}
+
+\setlength{\oddsidemargin}{-0.25 in}
+\setlength{\evensidemargin}{-0.25 in} \setlength{\topmargin}{-0.25
+in} \setlength{\textwidth}{7 in} \setlength{\textheight}{8.5 in}
+\setlength{\headsep}{0.25 in} \setlength{\parindent}{0 in}
+\setlength{\parskip}{0.1 in}
+
+\newcommand{\homework}[4]{
+\pagestyle{myheadings} \thispagestyle{plain}
+\newpage
+\setcounter{page}{1} \noindent
+\begin{center}
+\framebox{ \vbox{\vspace{2mm} \hbox to 6.28in { {\bf
+THU-70250403,~Convex~Optimization~(Fall 2018) \hfill Homework: #4}}
+\vspace{6mm} \hbox to 6.28in { {\Large \hfill #1 \hfill} }
+\vspace{6mm} \hbox to 6.28in { {\it Lecturer: #2 \hfill} }
+\vspace{2mm} \hbox to 6.28in { {\it Student: #3 \hfill} }
+\vspace{2mm} } }
+\end{center}
+\markboth{#1}{#1} \vspace*{4mm} }
+
+\addbibresource{./ref/ref.bib} % The filename of the bibliography
+
+\begin{document}
+
+\homework{L1-TWSVM}{Shuning Wang, Li Li \hspace{5mm} {\tt swang@tsinghua.edu.cn \tt
+li-li@tsinghua.edu.cn }}{闫茹钰, 喻望, 张芙作, 郑洁, 朱榕平 \hspace{5mm} {\tt }}{1}
+
+\input{./contents/chap5_code}
+
+\printbibliography[heading=bibintoc, title=参考文献]
+
+\appendix
+\include{./contents/appendix}
+
+\end{document}
