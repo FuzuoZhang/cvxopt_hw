@@ -15,3 +15,17 @@
 + `status`：查看工作区状态。
 + `log`：查看提交历史。
 + `reflog`：查看分支切换以及回滚操作历史。
+
+-----
+
+**Latex模板中新增的包**
+```
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{caption}
+```
+**对模板中设置的一点点改动**
+
+原来`\setcounter{page}{1} \setcounter{section}{#4} \noindent`
+
+修改后`\setcounter{page}{1} \setcounter{section}{0} \noindent`
