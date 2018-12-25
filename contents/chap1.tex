@@ -26,7 +26,7 @@ s.t. \; & (\mathbf{Aw}_2+\mathbf{e}_1b_2)+\mathbf{q}_2\geq \mathbf{e}_1, \mathbf
 \begin{align}
 \begin{split}
 \max\limits_{\pmb{\alpha}} \; & \mathbf{e}_2^T \pmb{\alpha}-\frac{1}{2}\pmb{\alpha}^T\mathbf{G}(\mathbf{H}^T\mathbf{H})^{-1}\mathbf{G}^T\pmb{\alpha} \\
-s.t. & \; 0 \leq \pmb{\alpha}\leq c_1 \mathbf{e}_2
+s.t. \; & 0 \leq \pmb{\alpha}\leq c_1 \mathbf{e}_2
 \end{split}
 \\
 \begin{split}
@@ -37,9 +37,9 @@ s.t. \; & 0 \leq \pmb{\beta} \leq c_2\mathbf{e}_1
 其中 $\mathbf{\alpha} \in R^{m_2}$ 和 $\mathbf{\beta}\in R^{m_1}$ 是拉格朗日乘子，可以利用 $\mathbf{\alpha}$ 和 $\mathbf{\beta}$ 得到两个不平行的超平面：
 \begin{align}
 \begin{split}
-& \mathbf{z}_1 = (\mathbf{w}^T_1b_1)^T = -(\mathbf{H}^T\mathbf{H})^{-1} \mathbf{G}^
+\mathbf{z}_1 &= (\mathbf{w}^T_1b_1)^T = -(\mathbf{H}^T\mathbf{H})^{-1} \mathbf{G}^
 T\pmb{\alpha} \\
-&\mathbf{z}_2 = (\mathbf{w}^T_2b_2)^T = -(\mathbf{G}^T\mathbf{G})^{-1} \mathbf{H}^T\pmb{\beta}
+\mathbf{z}_2 &= (\mathbf{w}^T_2b_2)^T = (\mathbf{G}^T\mathbf{G})^{-1} \mathbf{H}^T\pmb{\beta}
 \end{split}
 \end{align}
 由于逆矩阵 $(\mathbf{H}^T\mathbf{H})^{-1}$ 和 $(\mathbf{G}^T\mathbf{G})^{-1}$ 可能带来奇异问题，为防止矩阵奇异，可以加入一个正则项 $\varepsilon \mathbf{I}$，$\varepsilon$ 是一个足够小的正数。这样可以保证 $(\mathbf{H}^T\mathbf{H}+\varepsilon \mathbf{I})^{-1}$ 和 $(\mathbf{G}^T\mathbf{G}+\varepsilon \mathbf{I})^{-1}$ 正定，从而不会出现奇异问题。
