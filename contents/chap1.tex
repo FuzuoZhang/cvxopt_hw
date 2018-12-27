@@ -22,7 +22,7 @@ s.t. \; & (\mathbf{Aw}_2+\mathbf{e}_1b_2)+\mathbf{q}_2\geq \mathbf{e}_1, \mathbf
 \end{equation}
 当有一个新的点 $\mathbf{x}$，计算其到两个超平面的垂直距离，如果它距离超平面 $\mathbf{x}^T\mathbf{w}_1+b_1=0$ 的距离小于它到超平面 $\mathbf{x}^T\mathbf{w}_2+b_2=0$ 的距离，则将该点归入正类，否则它属于负类。
 
-我们也可以得到问题 \ref{ts1}、\ref{ts2} 的 Wolfe 对偶问题：
+我们也可以得到问题 (\ref{ts1})、(\ref{ts2}) 的 Wolfe 对偶问题：
 \begin{align}
 \begin{split}
 \max\limits_{\pmb{\alpha}} \; & \mathbf{e}_2^T \pmb{\alpha}-\frac{1}{2}\pmb{\alpha}^T\mathbf{G}(\mathbf{H}^T\mathbf{H})^{-1}\mathbf{G}^T\pmb{\alpha} \\

@@ -23,10 +23,10 @@
 将式 \eqref{yw2} 中的 $\mathbf{v}$ 和 $\mathbf{v}^p$ 替换为 $\|\mathbf{u}\|^{2}_{1}$ 和 $\|\mathbf{u}^p\|^{2}_{1}$，即得到式 \eqref{yw1}。
 
 \begin{theorem}
-   算法1在每步迭代中都使问题 的目标值单调递减。
+   算法1在每步迭代中都使问题 \eqref{ts8} 的目标值单调递减。
 \end{theorem}
 
-证明：首先，用以下等式重写\ 中的问题：
+证明：首先，用以下等式重写 \eqref{algo1} 中的问题：
 \begin{equation}
 \mathbf{z}^{(p+1)}_{1}=\mathop{\arg\min}_{\mathbf{z}_{1}}
 \frac{1}{2}\mathbf{z}^{T}_{1}\mathbf{H}^{T}\mathbf{D}^{T}_{1}\mathbf{H}\mathbf{z}_{1}+
@@ -81,24 +81,26 @@ c_{1}\mathbf{e}^{T}_{2}\mathop{\max}(0,\mathbf{e}_{2}+\mathbf{Gz}^{p}_{1})
 \end{aligned}
 \label{yw9}
 \end{equation}
-因为\ 中的问题恒小于零，因此算法1收敛，\eqref{yw9} 中的不等式成立。这表示\ 中的目标值随迭代递减，直到算法收敛。
+因为 \eqref{ts8} 中的问题恒小于零，因此算法1收敛，\eqref{yw9} 中的不等式成立。这表示 \eqref{ts8} 中的目标值随迭代递减，直到算法收敛。
+
 \begin{theorem}
-算法1收敛至问题\ 的一个局部最优解。
+算法1收敛至问题 \eqref{ts8} 的一个局部最优解。
 \end{theorem}
-证明：问题\ 的拉格朗日函数如下：
+
+证明：问题 \eqref{ts8} 的拉格朗日函数如下：
 \begin{equation}
 L_{2}(\mathbf{z}_{1},\mathbf{q}_{1})=\frac{1}{2}\|\mathbf{Hz}_{1}\|_{1}+
 c_{1}\mathbf{e}^{T}_{2}\mathbf{q}_{1}-\mathbf{\alpha}^{T}(-\mathbf{Gz}_{1}+\mathbf{q}_{1}-\mathbf{e}_{2})
 -\mathbf{\beta^{T}q}_{1}
 \label{yw10}
 \end{equation}
-其中，$\mathbf{\alpha}$ 和 $\mathbf{\beta}$ 是拉格朗日乘子向量。通过对其求导并取零，可以得到问题\ 的 KKT 条件：
+其中，$\mathbf{\alpha}$ 和 $\mathbf{\beta}$ 是拉格朗日乘子向量。通过对其求导并取零，可以得到问题 \eqref{ts8} 的 KKT 条件：
 \begin{equation}
 \mathbf{H}^{T}\mathbf{D}_{1}\mathbf{Hz}_{1}+\mathbf{G\alpha}=0,
 c_{1}\mathbf{e}_{2}-\mathbf{\alpha}-\mathbf{\beta}=0
 \label{yw11}
 \end{equation}
-在算法1的每步迭代中，寻找问题\ 中的最优 $\mathbf{z}^{(p+1)}_{1}$ 。因此，算法1的收敛解满足问题的 KKT 条件。接下来，定义算法1中问题\ 的拉格朗日函数如下：
+在算法1的每步迭代中，寻找问题 \eqref{algo1} 中的最优 $\mathbf{z}^{(p+1)}_{1}$ 。因此，算法1的收敛解满足问题的 KKT 条件。接下来，定义算法1中问题 \eqref{algo1} 的拉格朗日函数如下：
 \begin{equation}
 L_{3}(\mathbf{z}_{1},\mathbf{q}_{1})=\frac{1}{2}\mathbf{H}^{T}\mathbf{D}_{1}\mathbf{Hz}_{1}+
 c_{1}\mathbf{e}^{T}_{2}\mathbf{q}_{1}-\mathbf{\alpha}^{T}(-\mathbf{Gz}_{1}+\mathbf{q}_{1}-\mathbf{e}_{2})
@@ -111,4 +113,4 @@ c_{1}\mathbf{e}^{T}_{2}\mathbf{q}_{1}-\mathbf{\alpha}^{T}(-\mathbf{Gz}_{1}+\math
 c_{1}\mathbf{e}_{2}-\mathbf{\alpha}-\mathbf{\beta}=0
 \label{yw13}
 \end{equation}
-根据算法1中 $\mathbf{D}_{1}$ 的定义，等式 \eqref{yw11} 和 \eqref{yw13} 在算法1收敛时成立。这说明算法1的收敛解 $\mathbf{z}^{(p+1)}_{1}$ 满足问题\ 的KKT条件，是问题\ 的一个局部最优解。
+根据算法1中 $\mathbf{D}_{1}$ 的定义，等式 \eqref{yw11} 和 \eqref{yw13} 在算法1收敛时成立。这说明算法1的收敛解 $\mathbf{z}^{(p+1)}_{1}$ 满足问题 \eqref{ts8} 的KKT条件，是问题 \eqref{ts8} 的一个局部最优解。
