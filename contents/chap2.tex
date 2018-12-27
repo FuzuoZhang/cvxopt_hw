@@ -79,7 +79,7 @@ TWSVM 有良好的分类性能，已成为数据分类研究的热点。但 TWSV
 \end{split}
 \end{align}
 其中 $\pmb{\alpha}=(\alpha_1,\alpha_2,\alpha_3,\ldots,\alpha_{m_2})^T, \pmb{\beta}=(\beta_1,\beta_2,\beta_3,\ldots,\beta_{m_1})^T$ 为拉格朗日乘子，$\pmb{\alpha}\geq 0,\pmb{\beta}\geq 0$，令 $\pmb{L}_1$对$\mathbf{w}_1,b_1,\mathbf{q}_1$ 的偏导分别为0，可得Karush-Kuhn-Tucker (KKT)条件为：
-\begin{eqnarray}
+\begin{gather}
     \label{ts019}
 	\frac{\partial{L}}{\partial{\mathbf{w}_1}}=\mathbf{A}^T\mathbf{D}_1(\mathbf{Aw}_1+\mathbf{e}_1b_1)+\mathbf{B}^T\pmb{\alpha}=0\\
     \label{ts020}
@@ -88,7 +88,7 @@ TWSVM 有良好的分类性能，已成为数据分类研究的热点。但 TWSV
 	\frac{\partial{L}}{\partial{\mathbf{q}_1}}=c_1\mathbf{e}_2-\pmb{\alpha}-\pmb{\beta}=0\\
 	-(\mathbf{Bw}_1+\mathbf{e}_2b_1)+\mathbf{q}_1 \geq \mathbf{e}_2, \mathbf{q}_1\geq 0\\
 	\pmb{\alpha}^T(-(\mathbf{Bw}_1+\mathbf{e}_2b_1)+\mathbf{q}_1-\mathbf{e}_2)=0,\,\pmb{\beta}^T\mathbf{q}_1=0
-\end{eqnarray}
+\end{gather}
 从式 (\ref{ts10}) 可推出 $0\le \pmb{\alpha} \le c_1\mathbf{e}_2$，结合公式(\ref{ts019})、(\ref{ts020})可得：
 \begin{align}
 	\mathbf{A}^T\mathbf{e}_1^T\mathbf{D}_1(\mathbf{Ae}_1)(\mathbf{w}_1b_1)^T+(\mathbf{B}^T\mathbf{e}_2^T)\pmb{\alpha}=0
